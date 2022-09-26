@@ -90,7 +90,7 @@ h1{
 }
 
 h2{
-    border-top: #21325e 2px solid;
+    border-bottom: #21325e 2px solid;
 }
 
 .botoes{
@@ -138,15 +138,17 @@ h3{
 }
 
 #writeProjects{
-    padding: 1%;
+    padding: 20px;
     gap: 100px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .writeExperiences{
-    width: 700px;
-    height: 200px;
+    width: 600px;
+    height: 250px;
     font-size: 13px;
     transition: 0.4s;
     text-align: start;
@@ -167,9 +169,102 @@ h3{
 
 .link:hover {
     color:green;
-    font-size: 23px;
     text-decoration: none;
 }
+
+details{
+    padding: 2%;
+}
+
+.cv{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.cv svg{
+    top: 13px;
+    transition: 0.5s;
+    position: relative;
+}
+
+svg{
+    transition: 0.5s;
+}
+svg:hover{
+    color:#40E0D0;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column; 
+    background-color: rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
+    font-family: 'Roboto Mono', monospace;
+    width: 700px;
+    height: 750px;
+    padding: 2%;
+    left: 27%;
+    position: relative;
+    gap: 15px;
+    border-radius: 15px;
+    top: 30px;
+    transition: 0.5s;
+}
+.forms:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.forms h1{
+    font-size: 45px;
+}
+.f-h3{
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-left: 2px solid;
+}
+
+.forms div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 350px;
+    top: 45px;
+    position: relative;
+
+}
+
+.forms input{
+    height: 30px;
+    width: 200px;
+    padding: 2%;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.forms input:hover{
+    width: 210px;
+}
+
+.forms textarea{
+    padding: 1%;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+figure img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
 
  
 @media only screen and (max-width: 900px) {
@@ -194,7 +289,8 @@ h3{
     }
 
     .stack{
-        padding-left: 50px;
+        position: relative;
+        left: 15px;
     }
 
 

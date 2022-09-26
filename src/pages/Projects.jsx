@@ -17,6 +17,7 @@ function Projects(){
                 <a target="blank" href='https://galhoseco.netlify.app'><img src={GalhoSeco}/></a>
                 <a target="blank" href='https://g-contador.netlify.app'><img src={Contador}/></a>
             </div>
+
         </section>
     )
 }

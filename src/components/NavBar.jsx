@@ -27,6 +27,8 @@ function NavBar(){
             <div className="links">
                 <Link className="link" to="/"><HomeIcon/></Link>
                 <Link className="link" to="/projects">Deploy dos projetos</Link>
+                <Link className="link" to="/jorney">Minha história</Link>
+                <Link className="link" to="/getInTouch">Mail me</Link>
             </div>
             
         </section>

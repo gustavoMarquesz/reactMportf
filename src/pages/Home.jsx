@@ -12,9 +12,23 @@ import { Link } from 'react-router-dom';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 import Profile from "../assets/profile-pic.jpg"
+import Css from "../assets/css.png"
+import Git from "../assets/git.jpg"
+import Html from "../assets/html.png"
+import Script from "../assets/javascript.png"
+import Reacts from "../assets/react.png"
+
+
+import Java from "../assets/java.png"
+import Graddle from "../assets/gradle.png"
+import Spring from "../assets/spring.png"
+import Security from "../assets/security.png"
+import Mysql from "../assets/mysql.png"
+
 
 
 function Home(){
@@ -23,13 +37,16 @@ function Home(){
         <section>
             <div className="intro">
                 <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
+                <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
                 <a target="blank" href='https://www.linkedin.com/in/gustavo-marques-818048205/'><LinkedInIcon/></a>
-                <a target="blank"  href='https://www.instagram.com/gustavo.marquesz/'><InstagramIcon/></a><br/>Hello there, Gustavo Marques aqui!
-                <br/><span>Vamos tomar um café, enquanto criamos e desenvolvemos seu projeto</span><span className='coffe'> ☕</span></h1>
+    
+                <br/>Hello there, Gustavo Marques aqui!
+                <br/><span>Vamos tomar um café, enquanto criamos e desenvolvemos seu projeto</span><span className='coffe'> ☕<br/>
+                <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">resumo do que você vai encontrar aqui? baixa meu currículo <GetAppIcon/></a></span></h1>
                 <img src={Profile}/>
             </div>
 
-            <Experience/>
+            
 
             <div className="projects">
                 <h2>Meus projetos</h2>
@@ -37,11 +54,12 @@ function Home(){
                     {ProjectList.map((project, idx)=>{
                         return <ProjectItem id={idx} name={project.name} image={project.image}/>
                     })}
-            </div>
+                </div>
 
-            <Link className="link" to="/projects">Confere aqui como os sites ficaram!</Link>
+            <Link className="link" to="/projects">Veja como ficaram em Deploy</Link>
 
-            <h3>Projetos mais antigos</h3>
+            <details>
+            <summary>Projetos mais antigos</summary>
             <div className='writeProjec'>
                 <div id="writeProjects">
                     <div className="writeExperiences">
@@ -93,36 +111,77 @@ function Home(){
     
              
             </div>
-                    
-
                 </div>
+            </details>
+           
             </div>
-
 
             <div className='stacks'>
             <div className='stack'>
                 <h2>Skills</h2>
                 <h3>Front-End</h3>
                <nav className="botoes">
-                   <p className="botao">HTML</p>
-                   <p className="botao">CSS</p>
-                   <p className="botao">JavaScript</p>
-                   <p className="botao">GIT</p>
-                   <p className="botao">ReactJs</p>
-                   <p className="botao">Noção em responsividade</p>
+                   <figure>
+                        <img src={Html}/>
+                        <figcaption>HTML</figcaption>
+                   </figure>
+
+                   <figure>
+                        <img src={Css}/>
+                        <figcaption>CSS</figcaption>
+                   </figure>
+
+                   <figure>
+                        <img src={Script}/>
+                        <figcaption>JavaScript</figcaption>
+                   </figure>
+
+                   <figure>
+                        <img src={Reacts}/>
+                        <figcaption>ReactJs</figcaption>
+                   </figure>
+
+                   <figure>
+                        <img src={Git}/>
+                        <figcaption>GIT</figcaption>
+                   </figure>
                </nav>
            </div>
 
            <div className='stack'>
                 <h3>Back-End</h3>
                 <nav className="botoes">
-                <p className="botao">java</p>
-                <p className="botao">Maven</p>
-                <p className="botao">Graddle</p>
-                <p className="botao">SpringBoot</p>
-                <p className="botao">Spring Security</p>
-                <p className="botao">MYSQL server</p>
-                <p className="botao">GIT</p>
+                    
+                    <figure>
+                        <img src={Java}/>
+                        <figcaption>Java</figcaption>
+                    </figure>
+
+                    <figure>
+                    <   img src={Graddle}/>
+                        <figcaption>Graddle</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src={Spring}/>
+                        <figcaption>Spring-Boot</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src={Security}/>
+                        <figcaption>Spring-Security</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src={Mysql}/>
+                        <figcaption>MySQL server</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src={Git}/>
+                        <figcaption>GIT</figcaption>
+                    </figure>
+                
                 </nav>
             </div>
 
