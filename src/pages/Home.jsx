@@ -30,8 +30,72 @@ import Security from "../assets/security.png"
 import Mysql from "../assets/mysql.png"
 
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 function Home(){
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow/>,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
+
+      function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "#bdc3c7" }}
+            onClick={onClick}
+          />
+        );
+      }
+      
+      function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "#bdc3c7" }}
+            onClick={onClick}
+          />
+        );
+      }
+      
     
     return(
         <section>
@@ -47,17 +111,23 @@ function Home(){
             </div>
 
             
+            <div className='slides'>
+                <h3>Meus projetos</h3>
+                <Slider {...settings}>
+                    {ProjectList.map((project, idx)=>(
+                        <ProjectItem id={idx} image={project.image} name={project.name} description={project.description}/>
+                    ))}
+                </Slider>
+                <p>Arrasta pro lado pra ver todos |<Link className='link' to="/projects"> e confira os deploys aqui</Link></p>
+                
+            </div>
+
+            
 
             <div className="projects">
-                <h2>Meus projetos</h2>
-                <div className="projectList">
-                    {ProjectList.map((project, idx)=>{
-                        return <ProjectItem id={idx} name={project.name} image={project.image}/>
-                    })}
-                </div>
+                
 
-            <Link className="link" to="/projects">Veja como ficaram em Deploy</Link>
-
+            
             <details>
             <summary>Projetos mais antigos</summary>
             <div className='writeProjec'>

@@ -7,7 +7,7 @@ import Port from '../assets/portf.jpeg'
 
 export const ProjectList = [
     {
-        name: "Roda a Roda do milhão",
+        name: "Roda a Roda do milhão ",
         image: Milhao,
         description: "Jogo inspirado nos jogo Roda a Roda do SBT |  Você já começa com 50 reais e, se perder no primeiro turno, você leva pra casa os 50, mas se deseja participar de novo, você inicia com 0."
     },
