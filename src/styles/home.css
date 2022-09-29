@@ -260,14 +260,107 @@ svg:hover{
 }
 
 figure img{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
 }
 
+.separete{
+    padding-right: 370px;
+    padding-left: 350px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.stackExtra{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.containerSkills{
+    top: 10px;
+    position: relative;
+    width: 50%;
+    height: 20px;
+    background-color: #D2D7D3;
+    margin-left: 25%;
+    border-radius: 5px;
+}
+.skills{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+    color: white;
+    border-radius: 5px;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms button{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    position: relative;
+    top: 50px;
+    transition: 1s;
+}
+.forms button:hover{
+    color: white;
+    background-color: #21325e;
+}
+
+.english{width: 85%; background-color: #21325e;}
+.comunicativo{width: 75%; background-color: #21325e;}
+.equipe{width: 87%; background-color: #21325e;}
+.flexibilidade{width: 95%; background-color: #21325e;}
+.proatividade{width: 75%; background-color: #21325e;}
+.critica{width: 85%; background-color: #21325e;}
  
 @media only screen and (max-width: 900px) {
+
+.forms{
+    width: 340px;
+    height: 750px;
+    padding: 2%;
+    left: 3%;
+}
+
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+    }
+
+    .stackExtra{
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .containerSkills{
+        top: 20px;
+        position: relative;
+        width: 40%;
+        margin-left: 25%;
+        border-radius: 5px;
+    }
+    
+    
+    .separete{
+        padding-right: 10px;
+        padding-left: 10px;
+        display: flex;
+        
+    }
     .intro{
         display: flex;
         flex-direction: column-reverse;

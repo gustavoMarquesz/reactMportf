@@ -168,7 +168,7 @@ function Home(){
                     </figure>
 
                     <figure>
-                        <img src={Security}/>
+                        <img src={Security} className="security"/>
                         <figcaption>Spring-Security</figcaption>
                     </figure>
 
@@ -186,16 +186,55 @@ function Home(){
             </div>
 
             <div>
-           <div className='stack'>
+           <div className='stackExtra'>
                 <h3>Extra-skills</h3>
-                <nav className="botoes">
-                    <p className="botao">Advanced English</p>
-                    <p className="botao">Comunicativo</p>
-                    <p className="botao">Trabalho em equipe</p>
-                    <p className="botao">Flexibilidade</p>
-                    <p className="botao">Proatividade</p>
-                    <p className="botao">Resiliência</p>
-                    <p className="botao">Autocrítica</p>
+                <nav className="navExtra">
+                    <div className='separete'>
+                        <p>English</p>
+                        <div className='containerSkills'>
+                            <div className='skills english'></div>
+                        </div>
+                    </div>
+                    
+                    <div className='separete'>
+                        <p >Comunicativo</p>
+
+                        <div className='containerSkills'>
+                            <div className='skills comunicativo'></div>
+                        </div>
+                    </div>
+
+                    <div className='separete'>
+                        <p >Colaborativo</p>
+
+                        <div className='containerSkills'>
+                            <div className='skills equipe'></div>
+                        </div>
+                    </div>
+
+                    <div className='separete'>
+                        <p >Flexível</p>
+
+                        <div className='containerSkills'>
+                            <div className='skills flexibilidade'></div>
+                        </div>
+                    </div>
+
+                    <div className='separete'>
+                        <p >Proativo</p>
+
+                        <div className='containerSkills'>
+                            <div className='skills proatividade'></div>
+                        </div>
+                    </div>
+
+                    <div className='separete'>
+                        <p >Autocrítico</p>
+
+                        <div className='containerSkills'>
+                            <div className='skills critica'></div>
+                        </div>
+                    </div>
                 </nav>
            </div>
             </div>
