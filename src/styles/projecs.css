@@ -60,14 +60,16 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .projectList {
-    width: 100%;
-  }
-  .projectItem {
+  .slides{
+    padding-left: 35px;
     width: 300px;
-    height: 400px;
+  }
+  
+  .projectItem {
+    width: 259px;
+    min-height: 600px;
   }
   .projectHomeList img {
-    width: 350px;
+    min-height: 350px;
   }
 }

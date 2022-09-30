@@ -79,7 +79,7 @@ function Home(){
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "#bdc3c7" }}
+            style={{ ...style, display: "block", background: "black" }}
             onClick={onClick}
           />
         );
@@ -90,7 +90,7 @@ function Home(){
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "#bdc3c7" }}
+            style={{ ...style, display: "block", background: "black" }}
             onClick={onClick}
           />
         );
@@ -118,16 +118,14 @@ function Home(){
                         <ProjectItem id={idx} image={project.image} name={project.name} description={project.description}/>
                     ))}
                 </Slider>
-                <p>Arrasta pro lado pra ver todos |<Link className='link' to="/projects"> e confira os deploys aqui</Link></p>
+                <p>Arrasta pro lado pra ver todos |<Link className='link' to="/projects"> confira os deploys aqui</Link></p>
                 
             </div>
 
             
 
             <div className="projects">
-                
-
-            
+                            
             <details>
             <summary>Projetos mais antigos</summary>
             <div className='writeProjec'>
