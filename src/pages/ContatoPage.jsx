@@ -1,9 +1,9 @@
 
-
+import {motion} from "framer-motion"
 
 function ContatoPage (){
     return(
-        <section>
+        <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
             <form class="forms" action="https://api.staticforms.xyz/submit" method="post">
 
                 <input type="hidden" name="accessKey" value="4440f7f8-d27e-46e7-844c-3c4a98e4513e"/>
@@ -32,7 +32,7 @@ function ContatoPage (){
                     <button class="botao3" type="submit">Enviar</button>
                 </div>
                 </form>
-        </section>
+        </motion.div>
     )
 }
 export default ContatoPage

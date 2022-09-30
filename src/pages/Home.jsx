@@ -36,6 +36,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
+import {motion} from "framer-motion"
+
+
 function Home(){
     const settings = {
         dots: true,
@@ -98,7 +101,7 @@ function Home(){
       
     
     return(
-        <section>
+        <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
             <div className="intro">
                 <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
                 <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
@@ -307,7 +310,7 @@ function Home(){
            </div>
             </div>
             </div>
-        </section>
+        </motion.div>
     )
 }
 

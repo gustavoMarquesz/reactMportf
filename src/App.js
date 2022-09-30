@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import ProjectById from './pages/ProjectById'
 import ContatoPage from './pages/ContatoPage';
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom"
-
+import AnimatedRoutes from './components/AnimatedRoutes';
 
 
 function App() {
@@ -16,13 +16,8 @@ function App() {
     <section className="App">
       <Router>
         <NavBar/>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/projects" element={<Projects/>}/>
-          <Route path="/project/:id" element={<ProjectById/>}/>
-          <Route path="/jorney" element={<Experience/>}/>
-          <Route path='/getInTouch' element={<ContatoPage/>}></Route>
-        </Routes>
+        <AnimatedRoutes/>
+        
         <Footer/>
       </Router>
    

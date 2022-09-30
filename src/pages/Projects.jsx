@@ -7,9 +7,12 @@ import TodoReact from '../assets/example-three.jpeg'
 import GalhoSeco from '../assets/galho-seco.jpeg'
 import TodoVanilla from '../assets/todolist.jfif'
 
+
+import {motion} from "framer-motion"
+
 function Projects(){
     return(
-        <section>
+        <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
             <h3>Projects: </h3>
             <div className="projectHomeList">
                 <a target="blank" href='https://todo-g.netlify.app'><img src={TodoVanilla}/></a>
@@ -18,7 +21,7 @@ function Projects(){
                 <a target="blank" href='https://g-contador.netlify.app'><img src={Contador}/></a>
             </div>
 
-        </section>
+        </motion.div>
     )
 }
 
