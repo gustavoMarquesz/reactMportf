@@ -15,17 +15,19 @@
 /* a partir de agora estilizar as divs dos objetos */
 .projectItem {
   border-radius: 30px;
-  width: 450px;
-  min-height: 550px;
+  width: 410px;
+  min-height: 500px;
   margin: 40px;
   box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition: 0.5s;
+  font-size: 13px;
+
 }
 
 .slides{
-  padding-left: 50px;
-  width: 1500px;
+  padding-left: 30px;
+  width: 1400px;
 }
 
 .projectItem:hover {
@@ -61,14 +63,16 @@
 
 @media only screen and (max-width: 900px) {
   .slides{
-    padding-left: 35px;
-    width: 300px;
+    padding-left: 25px;
+    width: 320px;
   }
   
   .projectItem {
+    font-size: 10px;
     width: 259px;
-    min-height: 600px;
+    height: 200px;
   }
+
   .projectHomeList img {
     min-height: 350px;
   }

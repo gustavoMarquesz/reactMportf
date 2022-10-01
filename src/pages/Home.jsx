@@ -37,9 +37,25 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 import {motion} from "framer-motion"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
+import Jump from 'react-reveal/Jump';
+import Fade from 'react-reveal/Fade';
+
+
+
+import { useEffect } from 'react';
 
 
 function Home(){
+
+    useEffect(()=>{
+        Aos.init({duration: 2000})
+
+    },[])
+
+    
     const settings = {
         dots: true,
         infinite: false,
@@ -82,7 +98,7 @@ function Home(){
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "black" }}
+            style={{ ...style, display: "block", background: "#21325e", borderRadius: "50%"}}
             onClick={onClick}
           />
         );
@@ -93,7 +109,7 @@ function Home(){
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "black" }}
+            style={{ ...style, display: "block", background: "#21325e",  borderRadius: "50%" }}
             onClick={onClick}
           />
         );
@@ -102,25 +118,29 @@ function Home(){
     
     return(
         <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
-            <div className="intro">
-                <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
-                <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
-                <a target="blank" href='https://www.linkedin.com/in/gustavo-marques-818048205/'><LinkedInIcon/></a>
-    
-                <br/>Hello there, Gustavo Marques aqui!
-                <br/><span>Vamos tomar um café, enquanto criamos e desenvolvemos seu projeto</span><span className='coffe'> ☕<br/>
-                <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">resumo do que você vai encontrar aqui? baixa meu currículo <GetAppIcon/></a></span></h1>
-                <img src={Profile}/>
+            <div className="intro" >
+                <Fade>
+                    <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
+                    <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
+                    <a target="blank" href='https://www.linkedin.com/in/gustavo-marques-818048205/'><LinkedInIcon/></a>
+        
+                    <br/>Hello there, Gustavo Marques aqui!
+                    <br/><span>Vamos tomar um café, enquanto criamos e desenvolvemos seu projeto</span><span className='coffe'> ☕<br/>
+                    <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">resumo do que você vai encontrar aqui? baixa meu currículo <GetAppIcon/></a></span></h1>
+                    <Jump><img src={Profile}/></Jump>
+                </Fade>
             </div>
 
             
             <div className='slides'>
                 <h3>Meus projetos</h3>
+               <Fade bottom>
                 <Slider {...settings}>
-                    {ProjectList.map((project, idx)=>(
-                        <ProjectItem id={idx} image={project.image} name={project.name} description={project.description}/>
-                    ))}
-                </Slider>
+                        {ProjectList.map((project, idx)=>(
+                            <ProjectItem id={idx} image={project.image} name={project.name} description={project.description}/>
+                        ))}
+                    </Slider>
+               </Fade>
                 <p>Arrasta pro lado pra ver todos |<Link className='link' to="/projects"> confira os deploys aqui</Link></p>
                 
             </div>
