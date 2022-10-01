@@ -120,20 +120,45 @@ function Home(){
         <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
             <div className="intro" >
                 <Fade>
+                
                     <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
                     <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
                     <a target="blank" href='https://www.linkedin.com/in/gustavo-marques-818048205/'><LinkedInIcon/></a>
-        
+                    
                     <br/>Hello there, Gustavo Marques aqui!
-                    <br/><span>Vamos tomar um café, enquanto criamos e desenvolvemos seu projeto</span><span className='coffe'> ☕<br/>
-                    <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">resumo do que você vai encontrar aqui? baixa meu currículo <GetAppIcon/></a></span></h1>
+                    
+                    <br/><span>Vamos tomar um café, bater um papo e desenvolver seu projeto</span><span className='coffe'> ☕<br/></span></h1>
                     <Jump><img src={Profile}/></Jump>
                 </Fade>
+                
+            </div>
+            
+            <div class="custom-shape-divider-bottom-1664601271">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                        </svg>
+             </div>
+            
+            <div className='homeAboutMe'>
+                
+                <div className='descriptionTwo'>
+                    <p> <i>Projetos completos</i> <br/> <strong> 08+</strong></p>
+                    <p> <i>Tempo de experiência</i> <br/> 03 messes</p>
+                    <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">Download <i>Currículo</i><GetAppIcon/></a>
+                </div>
+
+                <Jump><img src={Profile}/></Jump>
+
+                <div className='descriptionOne'>
+                    <p> <i>Short Biography</i> <br/> English teacher to Front-end Developer, estilizando páginas web de alto nível para você.</p>
+                    <p> <i>Serviços</i> <br/>Landing Pages, blogs, sites completos e muito mais.</p>
+                    <p> <i>Contato</i> <br/> gustavo99a@hotmail.com (81)997812345</p>
+                </div>                
+
             </div>
 
-            
             <div className='slides'>
-                <h3>Meus projetos</h3>
+                <h3>Projetos pessoais</h3>
                <Fade bottom>
                 <Slider {...settings}>
                         {ProjectList.map((project, idx)=>(
@@ -141,7 +166,7 @@ function Home(){
                         ))}
                     </Slider>
                </Fade>
-                <p>Arrasta pro lado pra ver todos |<Link className='link' to="/projects"> confira os deploys aqui</Link></p>
+                <p><Link className='link' to="/projects"> confira os deploys aqui</Link></p>
                 
             </div>
 
@@ -207,77 +232,87 @@ function Home(){
            
             </div>
 
+            <h3>My Skills</h3>
             <div className='stacks'>
             <div className='stack'>
-                <h2>Skills</h2>
-                <h3>Front-End</h3>
+                <h3>Front-end: </h3>
                <nav className="botoes">
                    <figure>
                         <img src={Html}/>
                         <figcaption>HTML</figcaption>
+                        <figcaption>Intermediate</figcaption>
                    </figure>
 
                    <figure>
                         <img src={Css}/>
                         <figcaption>CSS</figcaption>
+                        <figcaption>Intermediate</figcaption>
                    </figure>
 
                    <figure>
                         <img src={Script}/>
                         <figcaption>JavaScript</figcaption>
+                        <figcaption>Intermediate</figcaption>
                    </figure>
 
                    <figure>
                         <img src={Reacts}/>
                         <figcaption>ReactJs</figcaption>
+                        <figcaption>Intermediate</figcaption>
                    </figure>
 
                    <figure>
                         <img src={Git}/>
                         <figcaption>GIT</figcaption>
+                        <figcaption>Intermediate</figcaption>
                    </figure>
                </nav>
            </div>
 
            <div className='stack'>
-                <h3>Back-End</h3>
+                <h3>Back-end: </h3>
                 <nav className="botoes">
                     
                     <figure>
                         <img src={Java}/>
                         <figcaption>Java</figcaption>
+                        <figcaption>Intermediate</figcaption>
                     </figure>
 
                     <figure>
                     <   img src={Graddle}/>
                         <figcaption>Graddle</figcaption>
+                        <figcaption>Basic</figcaption>
                     </figure>
 
                     <figure>
                         <img src={Spring}/>
                         <figcaption>Spring-Boot</figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src={Security} className="security"/>
-                        <figcaption>Spring-Security</figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src={Mysql}/>
-                        <figcaption>MySQL server</figcaption>
+                        <figcaption>Basic</figcaption>
                     </figure>
 
                     <figure>
                         <img src={Git}/>
                         <figcaption>GIT</figcaption>
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+
+                    
+                    <figure>
+                        <img src={Mysql}/>
+                        <figcaption>MySQL server</figcaption>
+                        <figcaption>Basic</figcaption>
                     </figure>
                 
                 </nav>
             </div>
 
             <div>
-           <div className='stackExtra'>
+          
+            </div>
+            </div>
+
+            <div className='stackExtra'>
                 <h3>Extra-skills</h3>
                 <nav className="navExtra">
                     <div className='separete'>
@@ -328,8 +363,6 @@ function Home(){
                     </div>
                 </nav>
            </div>
-            </div>
-            </div>
         </motion.div>
     )
 }
