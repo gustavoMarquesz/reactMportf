@@ -1,6 +1,6 @@
 import Contador from '../assets/contador.jfif'
 import TodoReact from '../assets/example-three.jpeg'
-import GalhoSeco from '../assets/galho-seco.jpeg'
+
 import TodoVanilla from '../assets/todolist.jfif'
 import Milhao from '../assets/milhao.jpeg'
 import Port from '../assets/portf.jpeg'
@@ -26,12 +26,6 @@ export const ProjectList = [
 
 
     {
-        name: "Ateliê Galho Seco",
-        image: GalhoSeco,
-        description: "Visando ajudar meus pais, que começaram um negocio, mais precisamente um ateliê e estudar HTML + CSS, fiz uma página estática para eles. "
-    },
-
-    {
         name: "Portfólio | Primeira versão",
         image: Port,
         description: "No primeiro contato que tive com HTML, CSS e Js, criei a primeira versão do meu portfólio."
@@ -45,4 +39,3 @@ export const ProjectList = [
 
   
 ]
-

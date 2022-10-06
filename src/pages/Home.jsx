@@ -7,11 +7,11 @@ import Projects from './Projects';
 import Experience from './Experience';
 import ProjectItem from '../components/ProjectsItem'
 import { ProjectList } from '../helpers/ProjectList'
+import { ProfessionalProjectList } from '../helpers/ProfessionalProjectList';
 import { Link } from 'react-router-dom';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import GetAppIcon from '@material-ui/icons/GetApp';
 
@@ -28,6 +28,12 @@ import Graddle from "../assets/gradle.png"
 import Spring from "../assets/spring.png"
 import Security from "../assets/security.png"
 import Mysql from "../assets/mysql.png"
+
+import Nebulosa from "../assets/nebuu.jpg"
+import Moon from "../assets/website.svg"
+import Skills from "../assets/skills.svg"
+import ProjectImg from "../assets/code.svg"
+
 
 
 import Slider from "react-slick";
@@ -120,18 +126,16 @@ function Home(){
         <motion.div intial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
             <div className="intro" >
                 <Fade>
-                
-                    <h1 className='typingAnimation'><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
+                    <h1 className=''><a target="blank" href='https://github.com/gustavoMarquesz'><GitHubIcon/></a>
                     <a target="blank" href="https://wa.me/5581997812345?text=Olá,%20vamos%20desenvolver%20um%20projeto%20juntos!"><WhatsAppIcon/></a>
                     <a target="blank" href='https://www.linkedin.com/in/gustavo-marques-818048205/'><LinkedInIcon/></a>
                     
                     <br/>Hello there, Gustavo Marques aqui!
-                    
                     <br/><span>Vamos tomar um café, bater um papo e desenvolver seu projeto</span><span className='coffe'> ☕<br/></span></h1>
-                    <Jump><img src={Profile}/></Jump>
+                    <img src={Moon}/> 
                 </Fade>
-                
             </div>
+
             
             <div class="custom-shape-divider-bottom-1664601271">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -139,12 +143,12 @@ function Home(){
                         </svg>
              </div>
             
+            
             <div className='homeAboutMe'>
-                
                 <div className='descriptionTwo'>
                     <p> <i>Projetos completos</i> <br/> <strong> 08+</strong></p>
                     <p> <i>Tempo de experiência</i> <br/> 03 messes</p>
-                    <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx">Download <i>Currículo</i><GetAppIcon/></a>
+                    <a className='cv' href='GustavoCv.docx' download="GustavoCv.docx"> <i className='curriculo'>Currículo  Download<GetAppIcon/></i></a>
                 </div>
 
                 <Jump><img src={Profile}/></Jump>
@@ -153,12 +157,29 @@ function Home(){
                     <p> <i>Short Biography</i> <br/> English teacher to Front-end Developer, estilizando páginas web de alto nível para você.</p>
                     <p> <i>Serviços</i> <br/>Landing Pages, blogs, sites completos e muito mais.</p>
                     <p> <i>Contato</i> <br/> gustavo99a@hotmail.com (81)997812345</p>
-                </div>                
+                </div>   
+                            
+
+            </div>
+
+            <div className='ssk'>
+                <h3>Projetos</h3>
+                <img src={ProjectImg}/>
 
             </div>
 
             <div className='slides'>
-                <h3>Projetos pessoais</h3>
+            <Fade bottom>
+                <h3>Profissionais</h3>
+                <Slider {...settings}>
+                        {ProfessionalProjectList.map((project, idx)=>(
+                            <ProjectItem id={idx} image={project.image} name={project.name} description={project.description}/>
+                            
+                        ))}
+                    </Slider>
+               </Fade>
+
+                <h3>Pessoais</h3>
                <Fade bottom>
                 <Slider {...settings}>
                         {ProjectList.map((project, idx)=>(
@@ -231,11 +252,14 @@ function Home(){
             </details>
            
             </div>
-
-            <h3>My Skills</h3>
+            
+            <div className='ssk'>
+                <h3>My Skills</h3>
+                <img className='skillsImg' src={Skills}/>
+            </div>
             <div className='stacks'>
             <div className='stack'>
-                <h3>Front-end: </h3>
+                <h3 className='teste'>Front-end: </h3>
                <nav className="botoes">
                    <figure>
                         <img src={Html}/>
@@ -270,7 +294,7 @@ function Home(){
            </div>
 
            <div className='stack'>
-                <h3>Back-end: </h3>
+                <h3 className='teste'>Back-end: </h3>
                 <nav className="botoes">
                     
                     <figure>

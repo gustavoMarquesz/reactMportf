@@ -10,8 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
-
   }
   
   .navbar a {
@@ -24,7 +22,7 @@
   }
 
   .navbar a:hover{
-    color: green;
+    color:chartreuse
   }
   
   .toggleButton {
